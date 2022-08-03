@@ -23,7 +23,7 @@ if (process.env.NODE_ENV !== 'development') {
 }
 const libm = ffi.Library(libPath, {
   MSPLogin: [ref.types.int, ['string', 'string', 'string']],
-  MSPLogout: [ref.types.int, [ref.types.void]],
+  MSPLogout: [ref.types.int, []],
   QIVWSessionBegin: [
     'string',
     ['string', 'string', ref.refType(ref.types.int)],
